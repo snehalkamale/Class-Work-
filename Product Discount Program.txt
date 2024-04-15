@@ -1,0 +1,28 @@
+Product Discount Program :-
+
+import java.util.Scanner;
+
+public class DiscountCalculator {
+    public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+       System.out.print("Enter the product price");
+        double productPrice = scanner.nextDouble();
+        System.out.print("Are you a premium member? (yes/no) ");
+        String premiumMembershipStatus = scanner.next();
+         double discountAmount = 0;
+        if (productPrice > 100) {
+            if (premiumMembershipStatus.equalsIgnoreCase("yes")) {
+                discountAmount = productPrice * 0.20; 
+            } else {
+                discountAmount = productPrice * 0.10; 
+            }
+        }
+
+                if (discountAmount > 0) {
+            System.out.println(" You qualify for a discount of" + discountAmount);
+        } else {
+            System.out.println(" no discount available for this product.");
+        }
+
+    }
+}

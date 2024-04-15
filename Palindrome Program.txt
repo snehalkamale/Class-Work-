@@ -1,0 +1,25 @@
+Palindrome Program :-
+
+import java.util.Scanner;
+public class PalindromeChecker {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+            inputString = inputString.toLowerCase();
+             boolean isPalindrome = true;
+        for (int i = 0; i < inputString.length() / 2; i++) {
+            if (inputString.charAt(i) != inputString.charAt(inputString.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println("The string \"" + inputString + "\" is a palindrome.");
+        } else {
+            System.out.println("The string \"" + inputString + "\" is not a palindrome.");
+        }
+
+    }
+}
